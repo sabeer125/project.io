@@ -1,0 +1,3438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabeer Birthday Art - Premium Birthday Decorations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --black: #121212;
+            --white: #FFFFFF;
+            --light-bg: #1A1A1A;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F5DEB3 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Updated Header - Smaller Navbar */
+        header {
+            background-color: rgba(18, 18, 18, 0.98);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 10px 0;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: 1.5rem;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shine 3s infinite linear;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .logo-text {
+            text-align: center;
+        }
+        
+        .logo-text h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1.5px;
+            margin-bottom: 3px;
+        }
+        
+        .logo-text span {
+            font-size: 0.7rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+        }
+        
+        .nav-links a i {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-gradient);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a.active {
+            color: var(--gold);
+        }
+        
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7); }
+            100% { box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); }
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        /* Global Music Button */
+        .music-btn {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            background: var(--gold-gradient);
+            color: var(--black);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .music-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .music-btn.playing {
+            animation: musicPulse 1.5s infinite;
+        }
+        
+        @keyframes musicPulse {
+            0% { box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4); }
+            50% { box-shadow: 0 10px 30px rgba(212, 175, 55, 0.7), 0 0 20px rgba(212, 175, 55, 0.4); }
+            100% { box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4); }
+        }
+        
+        /* Updated Hero Section with Birthday Animation */
+        .hero {
+            padding-top: 100px;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            padding: 50px 0;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+        
+        .birthday-text {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .happy-birthday {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        
+        .happy-birthday span {
+            color: var(--gold);
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .happy-birthday .gold-text {
+            color: var(--gold);
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        .hero-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+            z-index: 1;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background: var(--gold-gradient);
+            color: var(--black);
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            margin-top: 10px;
+            cursor: default;
+        }
+        
+        /* FIXED: Hero Book Now Button */
+        .hero-book-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--gold-gradient);
+            color: var(--black);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        
+        .hero-book-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.6s;
+        }
+        
+        .hero-book-btn:hover::before {
+            left: 100%;
+        }
+        
+        .hero-book-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .floating-balloons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .balloon {
+            position: absolute;
+            width: 40px;
+            height: 50px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: floatUp 15s linear infinite;
+            opacity: 0.7;
+        }
+        
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 20px;
+            background: rgba(255,255,255,0.5);
+        }
+        
+        .balloon:nth-child(1) {
+            left: 10%;
+            background: #FF6B8B;
+            animation-delay: 0s;
+            animation-duration: 20s;
+        }
+        
+        .balloon:nth-child(2) {
+            left: 30%;
+            background: #4ECDC4;
+            animation-delay: 5s;
+            animation-duration: 18s;
+        }
+        
+        .balloon:nth-child(3) {
+            left: 70%;
+            background: #FFE66D;
+            animation-delay: 10s;
+            animation-duration: 22s;
+        }
+        
+        .balloon:nth-child(4) {
+            left: 90%;
+            background: #6B5B95;
+            animation-delay: 7s;
+            animation-duration: 25s;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(20deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gold-gradient);
+            border-radius: 3px;
+        }
+        
+        .section-title p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* Updated Gallery Section - 3×2 Grid */
+        .gallery-section {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .gallery-tab {
+            background: var(--black);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .gallery-tab:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+        
+        .gallery-tab.active {
+            background: var(--gold-gradient);
+            color: var(--black);
+            border-color: transparent;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .gallery-card {
+            background: var(--black);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+        }
+        
+        .gallery-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .gallery-media {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            background: var(--light-bg);
+            cursor: pointer;
+        }
+        
+        .gallery-media img,
+        .gallery-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .gallery-media-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: rgba(255,255,255,0.5);
+            font-size: 1.1rem;
+        }
+        
+        .gallery-media-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        .gallery-card:hover .gallery-media img,
+        .gallery-card:hover .gallery-media video {
+            transform: scale(1.1);
+        }
+        
+        .media-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gold);
+            color: var(--black);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .gallery-content {
+            padding: 25px;
+        }
+        
+        .gallery-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .gallery-content p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .gallery-date {
+            color: var(--gold);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Video Play Button Overlay */
+        .video-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: rgba(212, 175, 55, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 3;
+            transition: var(--transition);
+            border: none;
+        }
+        
+        .video-play-btn:hover {
+            background: var(--gold);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        /* Video Completion Message */
+        .video-completion-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px 30px;
+            border-radius: 10px;
+            color: var(--gold);
+            font-size: 1.2rem;
+            text-align: center;
+            z-index: 4;
+            display: none;
+            border: 2px solid var(--gold);
+            max-width: 80%;
+        }
+        
+        .video-completion-message.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Image Lightbox Overlay */
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 2;
+        }
+        
+        .gallery-media:hover .image-overlay {
+            opacity: 1;
+        }
+        
+        .view-full-btn {
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .view-full-btn:hover {
+            background: var(--dark-gold);
+            transform: translateY(-3px);
+        }
+        
+        /* Offers Section - Updated with 6 Cards */
+        .offers-section {
+            padding: 100px 0;
+            background-color: var(--black);
+        }
+        
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 35px;
+        }
+        
+        .offer-card {
+            background: var(--light-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+        }
+        
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .offer-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gold-gradient);
+            color: var(--black);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .offer-image {
+            height: 220px;
+            overflow: hidden;
+            background: var(--black);
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .offer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .offer-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .offer-image-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        .offer-card:hover .offer-image img {
+            transform: scale(1.1);
+        }
+        
+        .offer-content {
+            padding: 30px;
+        }
+        
+        .offer-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .offer-content p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+            line-height: 1.7;
+            min-height: 80px;
+        }
+        
+        .offer-price {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .current-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+        
+        .old-price {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.4);
+            text-decoration: line-through;
+        }
+        
+        .offer-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .offer-features li {
+            padding: 8px 0;
+            color: rgba(255,255,255,0.8);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .offer-features li i {
+            color: var(--gold);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--gold-gradient);
+            color: var(--black);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.6s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+        
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+        
+        .btn-small {
+            padding: 12px 25px;
+            font-size: 1rem;
+        }
+        
+        /* New Birthday Menu Section */
+        .menu-section {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .menu-card {
+            background: var(--black);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+            transform: translateY(0);
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .menu-image {
+            height: 200px;
+            overflow: hidden;
+            background: var(--light-bg);
+            cursor: pointer;
+        }
+        
+        .menu-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .menu-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .menu-image-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        .menu-card:hover .menu-image img {
+            transform: scale(1.1);
+        }
+        
+        .menu-content {
+            padding: 25px;
+        }
+        
+        .menu-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .menu-content p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            min-height: 70px;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+            cursor: pointer;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--white);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        
+        .about-text h3 span {
+            color: var(--gold);
+        }
+        
+        .about-text p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 25px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            cursor: default;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background-color: var(--black);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--light-bg);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gold-gradient);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: 2rem;
+            margin: 0 auto 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .service-card p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        
+        .service-price {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            display: block;
+        }
+        
+        /* Contact Section - FIXED: Call Now button fixed */
+        .contact-section {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background: var(--black);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: var(--transition);
+            cursor: default;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+        
+        .contact-text h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .contact-text p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+        }
+        
+        .contact-text a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .contact-text a:hover {
+            text-decoration: underline;
+        }
+        
+        /* FIXED: Call Now button styling - Now fully clickable */
+        .call-now-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--gold);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 2px solid var(--gold);
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        .call-now-btn:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+        
+        .contact-form {
+            background: var(--black);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .contact-form h3 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--white);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .contact-form h3 span {
+            color: var(--gold);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--white);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 18px 20px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        
+        /* Feedback Section */
+        .feedback-section {
+            padding: 100px 0;
+            background-color: var(--black);
+        }
+        
+        .feedback-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light-bg);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-direction: row-reverse;
+        }
+        
+        .rating-stars input {
+            display: none;
+        }
+        
+        .rating-stars label {
+            font-size: 2.5rem;
+            color: #444;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .rating-stars input:checked ~ label,
+        .rating-stars label:hover,
+        .rating-stars label:hover ~ label {
+            color: var(--gold);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            padding: 80px 0 30px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 15px;
+            cursor: default;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold-gradient);
+            border-radius: 3px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 10px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .social-icons a {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.3rem;
+            transition: var(--transition);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .social-icons a:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            cursor: default;
+        }
+        
+        /* Page Navigation */
+        .page-section {
+            display: none;
+        }
+        
+        .page-section.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Modal/Popup Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: var(--light-bg);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .modal-close:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: rotate(90deg);
+        }
+        
+        .detail-modal .modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .detail-image {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+        }
+        
+        .detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .detail-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .detail-price {
+            font-size: 2.8rem;
+            color: var(--gold);
+            font-weight: 800;
+            margin-bottom: 25px;
+            display: block;
+        }
+        
+        .detail-description {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .booking-modal .modal-body {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .booking-modal h3 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--white);
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+        }
+        
+        .booking-success {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .booking-success i {
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .booking-success h4 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .booking-success p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.2rem;
+        }
+        
+        /* New Image Lightbox Modal */
+        .image-lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .image-lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-content img,
+        .lightbox-content video {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .lightbox-close:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: rotate(90deg);
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            transform: translateY(-50%);
+        }
+        
+        .lightbox-nav button {
+            background: rgba(212, 175, 55, 0.8);
+            border: none;
+            color: var(--black);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox-nav button:hover {
+            background: var(--gold);
+            transform: scale(1.1);
+        }
+        
+        /* Video Lightbox */
+        .video-lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .video-lightbox.active {
+            display: flex;
+        }
+        
+        .video-lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .video-lightbox-content video {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .detail-modal .modal-body {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-image {
+                height: 400px;
+                order: -1;
+            }
+            
+            .audio-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--black);
+                flex-direction: column;
+                padding: 20px 0;
+                gap: 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-top: 1px solid rgba(212, 175, 55, 0.2);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .offers-grid,
+            .services-grid,
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .happy-birthday {
+                font-size: 3.5rem;
+            }
+            
+            .audio-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .happy-birthday {
+                font-size: 2.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .offers-grid,
+            .services-grid,
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-form {
+                padding: 30px 25px;
+            }
+            
+            .feedback-container {
+                padding: 30px 25px;
+            }
+            
+            .modal-content {
+                padding: 30px 25px;
+            }
+            
+            .detail-info h3 {
+                font-size: 2rem;
+            }
+            
+            .detail-price {
+                font-size: 2.2rem;
+            }
+            
+            .lightbox-nav {
+                padding: 0 10px;
+            }
+            
+            .lightbox-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .audio-cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding-top: 80px;
+            }
+            
+            .happy-birthday {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .price-tag {
+                font-size: 1.5rem;
+                padding: 12px 30px;
+            }
+            
+            .btn {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .hero-book-btn {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .floating-balloons {
+                display: none;
+            }
+            
+            .gallery-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .gallery-tab {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+            
+            .video-play-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .audio-cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Adjust floating buttons for mobile */
+            .whatsapp-btn,
+            .music-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.7rem;
+            }
+            
+            .music-btn {
+                bottom: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-birthday-cake"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Sabeer Birthday Art</h1>
+                    <span>PREMIUM DECORATIONS</span>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#services" class="nav-link"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                <li><a href="#feedback" class="nav-link"><i class="fas fa-comment"></i> Feedback</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/923180277767?text=Hi%20Sabeer%20Birthday%20Art!%20I'm%20interested%20in%20your%20premium%20birthday%20decoration%20services." class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+   
+    <!-- Home Page -->
+    <section id="home" class="page-section active">
+        <div class="hero">
+            <!-- Floating Balloons Animation -->
+            <div class="floating-balloons">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="birthday-text">
+                            <h1 class="happy-birthday"><span class="gold-text">Happy</span> <span>Birthday</span></h1>
+                            <!-- UPDATED HERO SECTION DESCRIPTION ACCORDING TO IMAGES -->
+                            <p>Experience the magic of premium birthday decorations featuring exquisite balloon arches, elegant floral arrangements, and sophisticated gold-themed setups. Our expert team creates stunning visual displays with perfect lighting, beautiful backdrops, and attention to every detail to make your celebration truly unforgettable.</p>
+                            <div class="price-tag">Starting from ₨1500</div>
+                        </div>
+                        
+                        <!-- FIXED: Hero Book Now button is now fully clickable -->
+                        <a href="#contact" class="hero-book-btn" id="heroBookNowBtn">
+                            <i class="fas fa-calendar-check"></i> Book Now
+                        </a>
+                    </div>
+                    
+                    <div class="hero-image" onclick="openImageLightbox('https://flowerbouquet.pk/cdn/shop/files/birthday1.jpg?v=1716727050&width=533', 'hero')">
+                        <img src="https://flowerbouquet.pk/cdn/shop/files/birthday1.jpg?v=1716727050&width=533" alt="Beautiful Birthday Party Setup with Balloons and Decorations">
+                    </div>
+                </div>
+                
+                <!-- Gallery Section - UPDATED: 3×2 Grid Layout -->
+                <div class="gallery-section">
+                    <div class="section-title">
+                        <h2>Our Work Gallery</h2>
+                        <p>Browse through our premium birthday decoration setups and get inspired for your next celebration</p>
+                    </div>
+                    
+                    <!-- UPDATED: Removed Video 6 button completely, only Image 6 button remains -->
+                    <div class="gallery-tabs">
+                        <button class="gallery-tab active" data-tab="images">Images (6)</button>
+                    </div>
+                    
+                    <!-- UPDATED: 3×2 Grid Layout - First row 3 cards, second row 3 cards -->
+                    <div class="gallery-grid" id="imagesTab">
+                        <!-- Image Cards (6) in 3×2 grid -->
+                        <div class="gallery-card">
+                            <div class="gallery-media" data-image="https://pk-live-21.slatic.net/kf/S13a47de8c2414b4c9649db4d7631f8f3t.jpg">
+                                <img src="https://pk-live-21.slatic.net/kf/S13a47de8c2414b4c9649db4d7631f8f3t.jpg" alt="Elegant Birthday Party Setup">
+                                <div class="image-overlay">
+                                    <button class="view-full-btn">
+                                        <i class="fas fa-expand"></i> View Full
+                                    </button>
+                                </div>
+                                <div class="media-badge">Image 1</div>
+                            </div>
+                            <div class="gallery-content">
+                                <h3>Birthday Setup 1</h3>
+                                <p>Beautiful birthday decoration setup with custom theme.</p>
+                                <div class="gallery-date">
+                                    <i class="far fa-calendar"></i> Recent Work
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-card">
+                            <div class="gallery-media" data-image="https://cdn.balloondekor.com/14/1758356719004.webp">
+                                <img src="https://cdn.balloondekor.com/14/1758356719004.webp" alt="Premium Birthday Decoration with Balloons">
+                                <div class="image-overlay">
+                                    <button class="view-full-btn">
+                                        <i class="fas fa-expand"></i> View Full
+                                    </button>
+                                </div>
+                                <div class="media-badge">Image 2</div>
+                            </div>
+                            <div class="gallery-content">
+                                <h3>Birthday Setup 2</h3>
+                                <p>Elegant birthday decoration with premium materials.</p>
+                                <div class="gallery-date">
+                                    <i class="far fa-calendar"></i> Recent Work
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-card">
+                            <div class="gallery-media" data-image="https://m.media-amazon.com/images/I/81uEX0vU-9L._AC_UF1000,1000_QL80_.jpg">
+                                <img src="https://m.media-amazon.com/images/I/81uEX0vU-9L._AC_UF1000,1000_QL80_.jpg" alt="Theme-Based Birthday Celebration">
+                                <div class="image-overlay">
+                                    <button class="view-full-btn">
+                                        <i class="fas fa-expand"></i> View Full
+                                    </button>
+                                </div>
+                                <div class="media-badge">Image 3</div>
+                            </div>
+                            <div class="gallery-content">
+                                <h3>Birthday Setup 3</h3>
+                                <p>Complete theme-based birthday decoration.</p>
+                                <div class="gallery-date">
+                                    <i class="far fa-calendar"></i> Recent Work
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Second Row - Cards 4, 5, 6 -->
+                        <div class="gallery-card">
+                            <div class="gallery-media" data-image="c:\Users\sabee\Downloads\WhatsApp Image 2025-12-10 at 11.57.10 PM.jpeg">
+                                <img src="c:\Users\sabee\Downloads\WhatsApp Image 2025-12-10 at 11.57.10 PM.jpeg" alt="Balloon Arch Birthday Decoration">
+                                <div class="image-overlay">
+                                    <button class="view-full-btn">
+                                        <i class="fas fa-expand"></i> View Full
+                                    </button>
+                                </div>
+                                <div class="media-badge">Image 4</div>
+                            </div>
+                            <div class="gallery-content">
+                                <h3>Birthday Setup 4</h3>
+                                <p>Balloon arch and garland installation.</p>
+                                <div class="gallery-date">
+                                    <i class="far fa-calendar"></i> Recent Work
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-card">
+                            <div class="gallery-media" data-image="c:\Users\sabee\Downloads\WhatsApp Image 2025-12-10 at 10.24.13 PM.jpeg">
+                                <img src="c:\Users\sabee\Downloads\WhatsApp Image 2025-12-10 at 10.24.13 PM.jpeg" alt="Fairy Lights Birthday Setup">
+                                <div class="image-overlay">
+                                    <button class="view-full-btn">
+                                        <i class="fas fa-expand"></i> View Full
+                                    </button>
+                                </div>
+                                <div class="media-badge">Image 5</div>
+                            </div>
+                            <div class="gallery-content">
+                                <h3>Birthday Setup 5</h3>
+                                <p>Fairy lights and magical atmosphere setup.</p>
+                                <div class="gallery-date">
+                                    <i class="far fa-calendar"></i> Recent Work
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-card">
+                            <div class="gallery-media" data-image="c:\Users\sabee\Downloads\WhatsApp Image 2025-12-12 at 4.04.23 PM.jpeg">
+                                <img src="c:\Users\sabee\Downloads\WhatsApp Image 2025-12-12 at 4.04.23 PM.jpeg" alt="Custom Backdrop Birthday Decoration">
+                                <div class="image-overlay">
+                                    <button class="view-full-btn">
+                                        <i class="fas fa-expand"></i> View Full
+                                    </button>
+                                </div>
+                                <div class="media-badge">Image 6</div>
+                            </div>
+                            <div class="gallery-content">
+                                <h3>Birthday Setup 6</h3>
+                                <p>Custom backdrop wall for photo sessions.</p>
+                                <div class="gallery-date">
+                                    <i class="far fa-calendar"></i> Recent Work
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <!-- SECTION ORDER: Special Offer Packages appears here -->
+                <div class="offers-section">
+                    <div class="section-title">
+                        <h2>Special Offer Packages</h2>
+                        <p>Choose from our premium packages tailored for different celebration needs and budgets</p>
+                    </div>
+                    
+                    <div class="offers-grid">
+                        <!-- Card 1 - Updated text according to image -->
+                        <div class="offer-card">
+                            <div class="offer-badge">Most Popular</div>
+                            <div class="offer-image" onclick="openOfferImage('https://horaservices.com/api/uploads/compressed_webp/attachment-1712926262271.webp')">
+                                <img src="https://horaservices.com/api/uploads/compressed_webp/attachment-1712926262271.webp" alt="Premium Gold Birthday Package">
+                            </div>
+                            <div class="offer-content">
+                                <h3>Premium Gold Package</h3>
+                                <p>Complete birthday decoration with elegant gold theme, premium materials, custom backdrop, balloon arch, and luxurious lighting setup.</p>
+                                
+                                <div class="offer-price">
+                                    <span class="current-price">₨10,000</span>
+                                    <span class="old-price">₨12,000</span>
+                                </div>
+                                
+                                <ul class="offer-features">
+                                    <li><i class="fas fa-check"></i> Gold Theme Design</li>
+                                    <li><i class="fas fa-check"></i> Premium Balloon Arch</li>
+                                    <li><i class="fas fa-check"></i> Gold Backdrop Wall</li>
+                                    <li><i class="fas fa-check"></i> Luxury Lighting Setup</li>
+                                    <li><i class="fas fa-check"></i> Photo Booth Area</li>
+                                    <li><i class="fas fa-check"></i> 6 Hours Setup Time</li>
+                                </ul>
+                                
+                                <a href="https://wa.me/923180277767?text=I'm%20interested%20in%20Premium%20Gold%20Package%20(₨10000)" class="btn" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Book This Package
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 - Updated text according to image -->
+                        <div class="offer-card">
+                            <div class="offer-badge">Best Value</div>
+                            <div class="offer-image" onclick="openOfferImage('https://everything-party.com.au/cdn/shop/files/silver-orbz-latex-balloon-garland-with-silver-shimmer-wall-and-neon-sign-250836.jpg?v=1732306751')">
+                                <img src="https://everything-party.com.au/cdn/shop/files/silver-orbz-latex-balloon-garland-with-silver-shimmer-wall-and-neon-sign-250836.jpg?v=1732306751" alt="Standard Silver Birthday Package">
+                            </div>
+                            <div class="offer-content">
+                                <h3>Standard Silver Package</h3>
+                                <p>Elegant silver-themed birthday decoration with balloon garland, silver shimmer wall, neon sign, and decorative lighting setup.</p>
+                                
+                                <div class="offer-price">
+                                    <span class="current-price">₨8,000</span>
+                                    <span class="old-price">₨10,000</span>
+                                </div>
+                                
+                                <ul class="offer-features">
+                                    <li><i class="fas fa-check"></i> Silver Balloon Garland</li>
+                                    <li><i class="fas fa-check"></i> Silver Shimmer Wall</li>
+                                    <li><i class="fas fa-check"></i> Custom Neon Sign</li>
+                                    <li><i class="fas fa-check"></i> Decorative Lighting</li>
+                                    <li><i class="fas fa-check"></i> Birthday Banner</li>
+                                    <li><i class="fas fa-check"></i> 4 Hours Setup Time</li>
+                                </ul>
+                                
+                                <a href="https://wa.me/923180277767?text=I'm%20interested%20in%20Standard%20Silver%20Package%20(₨8000)" class="btn" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Book This Package
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3 - Updated text according to image -->
+                        <div class="offer-card">
+                            <div class="offer-badge">Budget Friendly</div>
+                            <div class="offer-image" onclick="openOfferImage('https://i.pinimg.com/474x/f1/be/fa/f1befad214dbf925e76b72c34135bc35.jpg')">
+                                <img src="https://i.pinimg.com/474x/f1/be/fa/f1befad214dbf925e76b72c34135bc35.jpg" alt="Basic Bronze Birthday Package">
+                            </div>
+                            <div class="offer-content">
+                                <h3>Basic Bronze Package</h3>
+                                <p>Simple yet elegant birthday decoration with bronze accents, perfect for intimate celebrations at home with balloons and banners.</p>
+                                
+                                <div class="offer-price">
+                                    <span class="current-price">₨6,000</span>
+                                    <span class="old-price">₨8,000</span>
+                                </div>
+                                
+                                <ul class="offer-features">
+                                    <li><i class="fas fa-check"></i> Bronze Balloon Decorations</li>
+                                    <li><i class="fas fa-check"></i> Birthday Banner Setup</li>
+                                    <li><i class="fas fa-check"></i> Simple Wall Decorations</li>
+                                    <li><i class="fas fa-check"></i> Table Centerpieces</li>
+                                    <li><i class="fas fa-check"></i> 3 Hours Setup Time</li>
+                                </ul>
+                                
+                                <a href="https://wa.me/923180277767?text=I'm%20interested%20in%20Basic%20Bronze%20Package%20(₨6000)" class="btn" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Book This Package
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4 - Updated text according to image -->
+                        <div class="offer-card">
+                            <div class="offer-badge">New</div>
+                            <div class="offer-image" data-image="https://m.media-amazon.com/images/I/81t0MJcc7FL.jpg">
+                                <img src="https://m.media-amazon.com/images/I/81t0MJcc7FL.jpg" alt="Baby Birthday Package">
+                            </div>
+                            <div class="offer-content">
+                                <h3>Baby Birthday Package</h3>
+                                <p>Adorable baby's first birthday decoration with soft colors, safe materials, milestone backdrop, and cute cake table setup.</p>
+                                
+                                <div class="offer-price">
+                                    <span class="current-price">₨8,500</span>
+                                    <span class="old-price">₨10,000</span>
+                                </div>
+                                
+                                <ul class="offer-features">
+                                    <li><i class="fas fa-check"></i> Baby-Safe Materials</li>
+                                    <li><i class="fas fa-check"></i> Soft Color Theme</li>
+                                    <li><i class="fas fa-check"></i> Milestone Backdrop</li>
+                                    <li><i class="fas fa-check"></i> Cake Table Setup</li>
+                                    <li><i class="fas fa-check"></i> Photo Session Area</li>
+                                    <li><i class="fas fa-check"></i> 5 Hours Setup Time</li>
+                                </ul>
+                                
+                                <button class="btn btn-outline book-package-btn" data-package="Baby Birthday Package">
+                                    <i class="fas fa-info-circle"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 5 - Updated text according to image -->
+                        <div class="offer-card">
+                            <div class="offer-badge">New</div>
+                            <div class="offer-image" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSKUt1D-wlj-4WtCrdXBMrmKcATM-vNEo2GQ&s">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSKUt1D-wlj-4WtCrdXBMrmKcATM-vNEo2GQ&s" alt="Theme Party Package">
+                            </div>
+                            <div class="offer-content">
+                                <h3>Theme Party Package</h3>
+                                <p>Complete theme-based decoration with princess, superhero, or cartoon themes, custom backdrops and matching decorations.</p>
+                                
+                                <div class="offer-price">
+                                    <span class="current-price">₨9,500</span>
+                                    <span class="old-price">₨11,000</span>
+                                </div>
+                                
+                                <ul class="offer-features">
+                                    <li><i class="fas fa-check"></i> Custom Theme Design</li>
+                                    <li><i class="fas fa-check"></i> Character Backdrops</li>
+                                    <li><i class="fas fa-check"></i> Theme-based Decorations</li>
+                                    <li><i class="fas fa-check"></i> Matching Balloon Set</li>
+                                    <li><i class="fas fa-check"></i> Themed Photo Booth</li>
+                                    <li><i class="fas fa-check"></i> 7 Hours Setup Time</li>
+                                </ul>
+                                
+                                <button class="btn btn-outline book-package-btn" data-package="Theme Party Package">
+                                    <i class="fas fa-info-circle"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 6 - Updated text according to image -->
+                        <div class="offer-card">
+                            <div class="offer-badge">New</div>
+                            <div class="offer-image" data-image="https://cdn.togetherv.com/black-white-classy-birthday-decor-main_1660805888.webp">
+                                <img src="https://cdn.togetherv.com/black-white-classy-birthday-decor-main_1660805888.webp" alt="Luxury Celebration Package">
+                            </div>
+                            <div class="offer-content">
+                                <h3>Luxury Celebration Package</h3>
+                                <p>Ultimate luxury black & white birthday setup with premium materials, professional lighting and full venue decoration.</p>
+                                
+                                <div class="offer-price">
+                                    <span class="current-price">₨15,000</span>
+                                    <span class="old-price">₨18,000</span>
+                                </div>
+                                
+                                <ul class="offer-features">
+                                    <li><i class="fas fa-check"></i> Premium Quality Materials</li>
+                                    <li><i class="fas fa-check"></i> Professional Lighting</li>
+                                    <li><i class="fas fa-check"></i> Custom Backdrop Design</li>
+                                    <li><i class="fas fa-check"></i> Full Venue Decoration</li>
+                                    <li><i class="fas fa-check"></i> Professional Photo Setup</li>
+                                    <li><i class="fas fa-check"></i> 8 Hours Setup Time</li>
+                                </ul>
+                                
+                                <button class="btn btn-outline book-package-btn" data-package="Luxury Celebration Package">
+                                    <i class="fas fa-info-circle"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SECTION ORDER: Birthday Decoration Ideas appears here -->
+                <div class="menu-section">
+                    <div class="section-title">
+                        <h2>Birthday Decoration Ideas</h2>
+                        <p>Explore our wide range of birthday decoration services and themes</p>
+                    </div>
+                    
+                    <div class="menu-grid">
+                        <!-- Menu cards remain the same -->
+                        <div class="menu-card">
+                            <div class="menu-image" onclick="openImageLightbox('https://www.lalamove.com/hs-fs/hubfs/S2-Sep-18-2025-09-24-29-6464-AM.jpg?width=2400&height=1600&name=S2-Sep-18-2025-09-24-29-6464-AM.jpg', 'menu')">
+                                <img src="https://www.lalamove.com/hs-fs/hubfs/S2-Sep-18-2025-09-24-29-6464-AM.jpg?width=2400&height=1600&name=S2-Sep-18-2025-09-24-29-6464-AM.jpg" alt="Home Birthday Decoration">
+                            </div>
+                            <div class="menu-content">
+                                <h3>Home Decoration</h3>
+                                <p>Transform your home into a celebration venue with our beautiful birthday decorations.</p>
+                                <button class="btn btn-outline btn-small view-details-btn" data-item="Home Decoration">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-card">
+                            <div class="menu-image" onclick="openImageLightbox('https://balloonsnow.com/wp-content/uploads/2018/04/Golden-Arches-e1522853381692-1024x669.jpeg', 'menu')">
+                                <img src="https://balloonsnow.com/wp-content/uploads/2018/04/Golden-Arches-e1522853381692-1024x669.jpeg" alt="Birthday Balloon Arch">
+                            </div>
+                            <div class="menu-content">
+                                <h3>Balloon Arch</h3>
+                                <p>Stunning balloon arches in various colors and designs for entrance decoration.</p>
+                                <button class="btn btn-outline btn-small view-details-btn" data-item="Balloon Arch">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-card">
+                            <div class="menu-image" onclick="openImageLightbox('https://img.staticmb.com/mbcontent/images/crop/uploads/2024/9/fairy-lights-decoration-ideas_0_1200.jpg.webp', 'menu')">
+                                <img src="https://img.staticmb.com/mbcontent/images/crop/uploads/2024/9/fairy-lights-decoration-ideas_0_1200.jpg.webp" alt="Birthday Fairy Lights">
+                            </div>
+                            <div class="menu-content">
+                                <h3>Fairy Lights Setup</h3>
+                                <p>Create magical atmosphere with beautiful fairy lights and LED decorations.</p>
+                                <button class="btn btn-outline btn-small view-details-btn" data-item="Fairy Lights Setup">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-card">
+                            <div class="menu-image" onclick="openImageLightbox('https://cdn.bestofsigns.com/media/catalog/product/c/u/custom-backdrop-bos-14.jpg', 'menu')">
+                                <img src="https://cdn.bestofsigns.com/media/catalog/product/c/u/custom-backdrop-bos-14.jpg" alt="Custom Birthday Backdrop">
+                            </div>
+                            <div class="menu-content">
+                                <h3>Custom Backdrop</h3>
+                                <p>Professional photo backdrop walls designed specifically for birthday photos.</p>
+                                <button class="btn btn-outline btn-small view-details-btn" data-item="Custom Backdrop">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-card">
+                            <div class="menu-image" onclick="openImageLightbox('https://specialyou.in/cdn/shop/files/618RaVvlFQL.jpg?v=1758617461&width=900', 'menu')">
+                                <img src="https://specialyou.in/cdn/shop/files/618RaVvlFQL.jpg?v=1758617461&width=900" alt="Baby First Birthday Decoration">
+                            </div>
+                            <div class="menu-content">
+                                <h3>Baby's First Birthday</h3>
+                                <p>Special decorations for baby's first birthday with soft colors and safe materials.</p>
+                                <button class="btn btn-outline btn-small view-details-btn" data-item="Baby's First Birthday">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="menu-card">
+                            <div class="menu-image" onclick="openImageLightbox('https://woogle.co.in/cdn/shop/files/WhatsAppImage2024-02-09at1.03.00PM.jpg?v=1707464024&width=1946', 'menu')">
+                                <img src="https://woogle.co.in/cdn/shop/files/WhatsAppImage2024-02-09at1.03.00PM.jpg?v=1707464024&width=1946" alt="Theme Birthday Decoration">
+                            </div>
+                            <div class="menu-content">
+                                <h3>Theme Decoration</h3>
+                                <p>Complete theme-based decorations including princess, superhero, cartoon themes.</p>
+                                <button class="btn btn-outline btn-small view-details-btn" data-item="Theme Decoration">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Page -->
+    <section id="about" class="page-section">
+        <div class="about-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                    <p>Learn about our passion for creating magical birthday celebrations</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image" onclick="openImageLightbox('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80', 'about')">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Our Team">
+                    </div>
+                    
+                    <div class="about-text">
+                        <h3>Creating <span>Unforgettable Memories</span> Since 2018</h3>
+                        <p>At Sabeer Birthday Art, we believe every birthday deserves to be extraordinary. What started as a passion for decoration has grown into a premium service that has brought smiles to hundreds of families across the city.</p>
+                        <p>Our team of creative designers and skilled decorators work together to transform ordinary spaces into magical celebration venues. We pay attention to every detail to ensure your birthday celebration is exactly how you envisioned it, or even better.</p>
+                        <p>We specialize in creating custom themes, stunning balloon installations, beautiful backdrops, and magical lighting setups that make your celebration truly special and memorable.</p>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">250+</span>
+                                <span class="stat-label">Events Decorated</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Custom Themes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                        </div>
+                        
+                        <!-- FIXED: About section button is now fully clickable -->
+                        <a href="#contact" class="hero-book-btn" style="margin-top: 30px;" id="aboutPageButton">
+                            <i class="fas fa-calendar-check"></i> Book Your Celebration
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Page -->
+    <section id="services" class="page-section">
+        <div class="services-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Services</h2>
+                    <p>Comprehensive birthday decoration services for all ages and occasions</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Simple Home Decoration</h3>
+                        <p>Basic birthday setup with balloons, banners, and simple decorations perfect for intimate home celebrations.</p>
+                        <span class="service-price">₨1,500 - ₨2,500</span>
+                        <a href="https://wa.me/923180277767?text=I'm%20interested%20in%20Simple%20Home%20Decoration" class="btn btn-outline" target="_blank">Book Now</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-archway"></i>
+                        </div>
+                        <h3>Balloon Garland/Arch</h3>
+                        <p>Elegant balloon garlands and arches in various colors and sizes for stunning visual impact.</p>
+                        <span class="service-price">₨2,000 - ₨4,000</span>
+                        <a href="https://wa.me/923180277767?text=I'm%20interested%20in%20Balloon%20Garland/Arch" class="btn btn-outline" target="_blank">Book Now</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Lights & Fairy Lights</h3>
+                        <p>Magical lighting with fairy lights, LED strips, and decorative lights for festive atmosphere.</p>
+                        <span class="service-price">₨1,000 - ₨2,500</span>
+                        <a href="https://wa.me/923180277767?text=I'm%20interested%20in%20Lights%20%26%20Fairy%20Lights" class="btn btn-outline" target="_blank">Book Now</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3>Backdrops & Birthday Wall</h3>
+                        <p>Custom-designed photo backdrops and birthday walls that become celebration highlights.</p>
+                        <span class="service-price">₨2,500 - ₨5,000</span>
+                        <a href="https://wa.me/923180277767?text=I'm%20interested%20in%20Backdrops%20%26%20Birthday%20Wall" class="btn btn-outline" target="_blank">Book Now</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3>Baby Birthday Setup</h3>
+                        <p>Special decorations for baby's first birthday with soft colors and safe materials.</p>
+                        <span class="service-price">₨3,000 - ₨6,000</span>
+                        <a href="https://wa.me/923180277767?text=I'm%20interested%20in%20Baby%20Birthday%20Setup" class="btn btn-outline" target="_blank">Book Now</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Theme Decoration</h3>
+                        <p>Complete theme-based decorations including princess, superhero, cartoon themes.</p>
+                        <span class="service-price">₨3,500 - ₨8,000</span>
+                        <a href="https://wa.me/923180277767?text=I'm%20interested%20in%20Theme%20Decoration" class="btn btn-outline" target="_blank">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Page -->
+    <section id="contact" class="page-section">
+        <div class="contact-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with us to discuss your birthday decoration requirements</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon" onclick="window.open('https://wa.me/923180277767', '_blank')">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>WhatsApp</h4>
+                                <p>Quickest way to reach us. Send photos of your space and theme ideas.</p>
+                                <p><strong><a href="https://wa.me/923180277767" target="_blank">0318-02777767</a></strong></p>
+                                <a href="https://wa.me/923180277767" class="btn btn-small" style="margin-top: 15px; text-decoration: none;" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Message Now
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon" onclick="window.location.href='tel:03180277767'">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone Call</h4>
+                                <p>Available for consultations and bookings during business hours.</p>
+                                <p><strong><a href="tel:03180277767">0318-0277767</a></strong></p>
+                                <!-- FIXED: Call Now button is now fully clickable -->
+                                <a href="tel:03180277767" class="call-now-btn">
+                                    <i class="fas fa-phone"></i> Call Now
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon" onclick="window.scrollTo(0, 0)">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Working Hours</h4>
+                                <p><strong>Monday - Sunday: 9:00 AM - 10:00 PM</strong></p>
+                                <p>We accept bookings 7 days a week. Setup appointments available morning to evening.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon" onclick="window.open('https://maps.google.com/?q=Karachi', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Service Area</h4>
+                                <p><strong>Serving all areas of Karachi</strong></p>
+                                <p>Home decoration services available at your location. Free setup within city limits.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send Us a <span>Message</span></h3>
+                        
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Your Name *</label>
+                                <input type="text" id="contactName" required placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number *</label>
+                                <input type="tel" id="contactPhone" required placeholder="Enter your WhatsApp number">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactDate">Event Date *</label>
+                                <input type="date" id="contactDate" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactService">Service Required</label>
+                                <select id="contactService">
+                                    <option value="">Select Service</option>
+                                    <option value="simple">Simple Home Decoration</option>
+                                    <option value="balloon">Balloon Garland/Arch</option>
+                                    <option value="lights">Lights & Fairy Lights</option>
+                                    <option value="backdrop">Backdrops & Birthday Wall</option>
+                                    <option value="baby">Baby Birthday Setup</option>
+                                    <option value="theme">Theme Decoration</option>
+                                    <option value="package">Package Deal</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMessage">Additional Details</label>
+                                <textarea id="contactMessage" rows="5" placeholder="Tell us about your theme preferences, venue size, special requests, etc..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Feedback Page -->
+    <section id="feedback" class="page-section">
+        <div class="feedback-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Customer Feedback</h2>
+                    <p>We value your feedback to improve our services</p>
+                </div>
+                
+                <div class="feedback-container">
+                    <h3 style="text-align: center; margin-bottom: 30px; color: var(--white); font-family: 'Playfair Display', serif;">Share Your Experience</h3>
+                    
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <label for="feedbackName">Your Name</label>
+                            <input type="text" id="feedbackName" placeholder="Enter your name (optional)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Rate Our Service</label>
+                            <div class="rating-stars">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedbackMessage">Your Feedback *</label>
+                            <textarea id="feedbackMessage" rows="5" required placeholder="Share your experience with our service..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedbackEmail">Email (Optional)</label>
+                            <input type="email" id="feedbackEmail" placeholder="Enter your email for updates">
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <i class="fas fa-share-square"></i> Submit Feedback
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sabeer Birthday Art</h3>
+                    <p>Premium birthday decoration services creating magical celebration experiences. We transform ordinary spaces into extraordinary venues with creativity and attention to detail.</p>
+                    
+                    <div class="social-icons">
+                        <a href="#" onclick="openSocialLink('facebook')"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" onclick="openSocialLink('instagram')"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/923180277767" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:contact@sabeerbirthdayart.com" onclick="window.location.href='mailto:contact@sabeerbirthdayart.com'"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-nav-link"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about" class="footer-nav-link"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#services" class="footer-nav-link"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#contact" class="footer-nav-link"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#feedback" class="footer-nav-link"><i class="fas fa-chevron-right"></i> Feedback</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services" class="footer-nav-link"><i class="fas fa-home"></i> Simple Home Decoration</a></li>
+                        <li><a href="#services" class="footer-nav-link"><i class="fas fa-archway"></i> Balloon Garland/Arch</a></li>
+                        <li><a href="#services" class="footer-nav-link"><i class="fas fa-lightbulb"></i> Lights & Fairy Lights</a></li>
+                        <li><a href="#services" class="footer-nav-link"><i class="fas fa-image"></i> Backdrops & Birthday Wall</a></li>
+                        <li><a href="#services" class="footer-nav-link"><i class="fas fa-baby"></i> Baby Birthday Setup</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:03180277767"><i class="fas fa-phone"></i> 0318-0277767</a></li>
+                        <li><a href="https://wa.me/923180277767" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: 0318-0277767</a></li>
+                        <li><a href="#contact"><i class="fas fa-clock"></i> 9:00 AM - 10:00 PM</a></li>
+                        <li><a href="#" onclick="window.open('https://maps.google.com/?q=Karachi', '_blank')"><i class="fas fa-map-marker-alt"></i> Serving all Karachi</a></li>
+                        <li><a href="mailto:contact@sabeerbirthdayart.com"><i class="fas fa-envelope"></i> contact@sabeerbirthdayart.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Sabeer Birthday Art. All rights reserved.Premium Birthday Decoration Services</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Designed with <i class="fas fa-heart" style="color: var(--gold);"></i> for unforgettable celebrations</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Detail Modal -->
+    <div class="modal detail-modal" id="detailModal">
+        <div class="modal-content">
+            <button class="modal-close" id="detailModalClose">&times;</button>
+            <div class="modal-body" id="detailModalBody">
+                <!-- Content will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Booking Modal -->
+    <div class="modal booking-modal" id="bookingModal">
+        <div class="modal-content">
+            <button class="modal-close" id="bookingModalClose">&times;</button>
+            <div class="modal-body" id="bookingModalBody">
+                <!-- Content will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Image Lightbox Modal -->
+    <div class="image-lightbox" id="imageLightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <div class="lightbox-nav">
+            <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="lightbox-content" id="lightboxContent">
+            <!-- Image will be loaded here -->
+        </div>
+    </div>
+    
+    <!-- Video Lightbox Modal -->
+    <div class="video-lightbox" id="videoLightbox">
+        <button class="lightbox-close" id="videoLightboxClose">&times;</button>
+        <div class="video-lightbox-content" id="videoLightboxContent">
+            <!-- Video will be loaded here -->
+        </div>
+    </div>
+    
+    <!-- ALL JAVASCRIPT INCLUDED IN THE HTML FILE -->
+    <script>
+        // ==================== BASIC WEBSITE FUNCTIONALITY ====================
+        
+        // Global Music Player
+        let isMusicPlaying = false;
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Page Navigation - FIXED: Now works properly for all navigation
+        const navLinksAll = document.querySelectorAll('.nav-link, .footer-nav-link');
+        const pageSections = document.querySelectorAll('.page-section');
+        
+        // Function to navigate to page
+        function navigateToPage(targetId) {
+            // Hide all page sections
+            pageSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show target page section
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+            
+            // Update active nav link
+            navLinksAll.forEach(navLink => {
+                navLink.classList.remove('active');
+            });
+            
+            // Find and activate corresponding nav link
+            const activeNavLink = document.querySelector(`.nav-link[href="#${targetId}"]`);
+            if (activeNavLink) {
+                activeNavLink.classList.add('active');
+            }
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 992) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Add click event to all navigation links
+        navLinksAll.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                navigateToPage(targetId);
+            });
+        });
+        
+        // Gallery Tabs - UPDATED: Only Images tab remains
+        const galleryTabs = document.querySelectorAll('.gallery-tab');
+        const imagesTab = document.getElementById('imagesTab');
+        
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                galleryTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Only show images tab
+                imagesTab.style.display = 'grid';
+            });
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('contactName').value;
+            const phone = document.getElementById('contactPhone').value;
+            const date = document.getElementById('contactDate').value;
+            const service = document.getElementById('contactService').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            const whatsappMessage = `New Contact Request:%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Event Date:* ${date}%0A*Service:* ${service}%0A*Message:* ${message}%0A%0A_Please contact me for more details._`;
+            
+            window.open(`https://wa.me/923180277767?text=${whatsappMessage}`, '_blank');
+            contactForm.reset();
+            alert('Thank you! Your message has been sent. You will be redirected to WhatsApp.');
+        });
+        
+        // Feedback Form Submission
+        const feedbackForm = document.getElementById('feedbackForm');
+        
+        feedbackForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('feedbackName').value || 'Anonymous';
+            const rating = document.querySelector('input[name="rating"]:checked');
+            const feedback = document.getElementById('feedbackMessage').value;
+            const email = document.getElementById('feedbackEmail').value;
+            
+            if (!rating) {
+                alert('Please provide a rating by selecting stars.');
+                return;
+            }
+            
+            const feedbackMsg = `New Feedback:%0A%0A*Name:* ${name}%0A*Rating:* ${rating.value} stars%0A*Feedback:* ${feedback}%0A*Email:* ${email || 'Not provided'}%0A%0A_Thank you for your feedback!_`;
+            
+            window.open(`https://wa.me/923180277767?text=${feedbackMsg}`, '_blank');
+            feedbackForm.reset();
+            alert('Thank you for your valuable feedback!');
+        });
+        
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('contactDate').min = today;
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '8px 0';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.5)';
+            } else {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992 && 
+                !navLinks.contains(e.target) && 
+                !mobileMenuBtn.contains(e.target) && 
+                navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // ==================== FIX: HERO PAGE BOOK NOW BUTTON ====================
+        
+        const heroBookNowBtn = document.getElementById('heroBookNowBtn');
+        if (heroBookNowBtn) {
+            heroBookNowBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigateToPage('contact');
+            });
+        }
+        
+        // ==================== FIX: ABOUT PAGE BUTTON ====================
+        
+        const aboutPageButton = document.getElementById('aboutPageButton');
+        if (aboutPageButton) {
+            aboutPageButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigateToPage('contact');
+            });
+        }
+        
+        // ==================== FIX: CONTACT PAGE CALL NOW BUTTON ====================
+        
+        // Make sure Call Now button works
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('call-now-btn') || e.target.closest('.call-now-btn')) {
+                e.preventDefault();
+                window.location.href = 'tel:03180277767';
+            }
+        });
+        
+        // ==================== IMAGE LIGHTBOX FUNCTIONALITY ====================
+        
+        const imageLightbox = document.getElementById('imageLightbox');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxContent = document.getElementById('lightboxContent');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        
+        let currentImageIndex = 0;
+        let currentImages = [];
+        let currentSource = '';
+        
+        // Open image lightbox
+        window.openImageLightbox = function(imageUrl, source) {
+            if (source === 'gallery') {
+                currentImages = Array.from(document.querySelectorAll('.gallery-media[data-image]'))
+                    .map(el => el.dataset.image)
+                    .filter(url => url && url.trim() !== '');
+                currentSource = 'gallery';
+            } else if (source === 'offers') {
+                currentImages = Array.from(document.querySelectorAll('.offer-image img'))
+                    .map(el => el.src)
+                    .filter(url => url && url.trim() !== '');
+                currentSource = 'offers';
+            } else if (source === 'menu') {
+                currentImages = Array.from(document.querySelectorAll('.menu-image img'))
+                    .map(el => el.src)
+                    .filter(url => url && url.trim() !== '');
+                currentSource = 'menu';
+            } else if (source === 'about') {
+                currentImages = Array.from(document.querySelectorAll('.about-image img'))
+                    .map(el => el.src)
+                    .filter(url => url && url.trim() !== '');
+                currentSource = 'about';
+            } else if (source === 'hero') {
+                currentImages = [imageUrl];
+                currentSource = 'hero';
+            }
+            
+            currentImageIndex = currentImages.indexOf(imageUrl);
+            if (currentImageIndex === -1) currentImageIndex = 0;
+            
+            lightboxContent.innerHTML = `<img src="${imageUrl}" alt="Full Size Image">`;
+            imageLightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Close image lightbox
+        lightboxClose.addEventListener('click', () => {
+            imageLightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close image lightbox when clicking outside
+        imageLightbox.addEventListener('click', (e) => {
+            if (e.target === imageLightbox) {
+                imageLightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Navigation for image lightbox
+        lightboxPrev.addEventListener('click', () => {
+            if (currentImages.length > 0) {
+                currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+                lightboxContent.innerHTML = `<img src="${currentImages[currentImageIndex]}" alt="Full Size Image">`;
+            }
+        });
+        
+        lightboxNext.addEventListener('click', () => {
+            if (currentImages.length > 0) {
+                currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+                lightboxContent.innerHTML = `<img src="${currentImages[currentImageIndex]}" alt="Full Size Image">`;
+            }
+        });
+        
+        // Function to open offer images (first 3 cards)
+        window.openOfferImage = function(imageUrl) {
+            currentImages = Array.from(document.querySelectorAll('.offer-card:nth-child(-n+3) .offer-image img'))
+                .map(el => el.src)
+                .filter(url => url && url.trim() !== '');
+            currentSource = 'offers';
+            
+            currentImageIndex = currentImages.indexOf(imageUrl);
+            if (currentImageIndex === -1) currentImageIndex = 0;
+            
+            lightboxContent.innerHTML = `<img src="${imageUrl}" alt="Full Size Image">`;
+            imageLightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // ==================== VIDEO LIGHTBOX FUNCTIONALITY ====================
+        
+        const videoLightbox = document.getElementById('videoLightbox');
+        const videoLightboxClose = document.getElementById('videoLightboxClose');
+        const videoLightboxContent = document.getElementById('videoLightboxContent');
+        
+        // Open video lightbox
+        window.openVideoLightbox = function(videoUrl) {
+            videoLightboxContent.innerHTML = `
+                <video controls autoplay style="width: 100%; height: 100%;">
+                    <source src="${videoUrl}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+            videoLightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Add event listener for video completion
+            const video = videoLightboxContent.querySelector('video');
+            if (video) {
+                video.addEventListener('ended', function() {
+                    const completionMsg = document.createElement('div');
+                    completionMsg.className = 'video-completion-message show';
+                    completionMsg.innerHTML = 'Video Completed Successfully!';
+                    videoLightboxContent.appendChild(completionMsg);
+                    
+                    // Remove message after 3 seconds
+                    setTimeout(() => {
+                        if (completionMsg.parentNode) {
+                            completionMsg.remove();
+                        }
+                    }, 3000);
+                });
+            }
+        }
+        
+        // Close video lightbox
+        videoLightboxClose.addEventListener('click', () => {
+            videoLightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            // Stop video when closing
+            const video = videoLightboxContent.querySelector('video');
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        });
+        
+        // Close video lightbox when clicking outside
+        videoLightbox.addEventListener('click', (e) => {
+            if (e.target === videoLightbox) {
+                videoLightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                // Stop video when closing
+                const video = videoLightboxContent.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            }
+        });
+        
+        // ==================== DETAIL MODAL FUNCTIONALITY ====================
+        
+        const detailModal = document.getElementById('detailModal');
+        const detailModalClose = document.getElementById('detailModalClose');
+        const detailModalBody = document.getElementById('detailModalBody');
+        const viewDetailsBtns = document.querySelectorAll('.view-details-btn, .book-package-btn');
+        
+        const menuItems = {
+            'Home Decoration': {
+                price: '₨1,500 - ₨2,500',
+                description: 'Transform your home into a celebration venue with beautiful birthday decorations including balloons, banners, and festive arrangements. Perfect for intimate celebrations.',
+                image: 'https://www.lalamove.com/hs-fs/hubfs/S2-Sep-18-2025-09-24-29-6464-AM.jpg?width=2400&height=1600&name=S2-Sep-18-2025-09-24-29-6464-AM.jpg'
+            },
+            'Balloon Arch': {
+                price: '₨2,000 - ₨4,000',
+                description: 'Stunning balloon arches in various colors and designs for entrance decoration. Customizable to match your theme and color preferences.',
+                image: 'https://balloonsnow.com/wp-content/uploads/2018/04/Golden-Arches-e1522853381692-1024x669.jpeg'
+            },
+            'Fairy Lights Setup': {
+                price: '₨1,000 - ₨2,500',
+                description: 'Create a magical atmosphere with beautiful fairy lights and LED decorations. Perfect for evening parties and creating a dreamy ambiance.',
+                image: 'https://img.staticmb.com/mbcontent/images/crop/uploads/2024/9/fairy-lights-decoration-ideas_0_1200.jpg.webp'
+            },
+            'Custom Backdrop': {
+                price: '₨2,500 - ₨5,000',
+                description: 'Professional photo backdrop walls designed specifically for birthday photos. Custom designs available to match your theme.',
+                image: 'https://cdn.bestofsigns.com/media/catalog/product/c/u/custom-backdrop-bos-14.jpg'
+            },
+            'Baby\'s First Birthday': {
+                price: '₨3,000 - ₨6,000',
+                description: 'Special decorations for baby\'s first birthday with soft colors and safe materials. Includes milestone backdrop and cake table setup.',
+                image: 'https://specialyou.in/cdn/shop/files/618RaVvlFQL.jpg?v=1758617461&width=900'
+            },
+            'Theme Decoration': {
+                price: '₨3,500 - ₨8,000',
+                description: 'Complete theme-based decorations including princess, superhero, cartoon themes. Full venue transformation to match your chosen theme.',
+                image: 'https://woogle.co.in/cdn/shop/files/WhatsAppImage2024-02-09at1.03.00PM.jpg?v=1707464024&width=1946'
+            },
+            'Baby Birthday Package': {
+                price: '₨8,500',
+                description: 'Adorable baby\'s first birthday decoration with soft colors, safe materials, milestone backdrop, and cute cake table setup. Perfect for celebrating your little one\'s special day.',
+                image: 'https://m.media-amazon.com/images/I/81t0MJcc7FL.jpg'
+            },
+            'Theme Party Package': {
+                price: '₨9,500',
+                description: 'Complete theme-based decoration with princess, superhero, or cartoon themes, custom backdrops and matching decorations. Transform your venue into a magical theme world.',
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSKUt1D-wlj-4WtCrdXBMrmKcATM-vNEo2GQ&s'
+            },
+            'Luxury Celebration Package': {
+                price: '₨15,000',
+                description: 'Ultimate luxury black & white birthday setup with premium materials, professional lighting and full venue decoration. Create a sophisticated and memorable celebration.',
+                image: 'https://cdn.togetherv.com/black-white-classy-birthday-decor-main_1660805888.webp'
+            }
+        };
+        
+        // Open detail modal
+        viewDetailsBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const itemName = btn.dataset.item || btn.dataset.package;
+                const itemData = menuItems[itemName] || {
+                    price: 'Price to be added',
+                    description: 'Description to be added',
+                    image: 'default'
+                };
+                
+                detailModalBody.innerHTML = `
+                    <div class="detail-image">
+                        <img src="${itemData.image}" alt="${itemName}" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="detail-info">
+                        <h3>${itemName}</h3>
+                        <span class="detail-price">${itemData.price}</span>
+                        <p class="detail-description">${itemData.description}</p>
+                        <button class="btn book-now-btn" data-item="${itemName}">
+                            <i class="fas fa-calendar-check"></i> Book Now
+                        </button>
+                    </div>
+                `;
+                
+                detailModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close detail modal
+        detailModalClose.addEventListener('click', () => {
+            detailModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        detailModal.addEventListener('click', (e) => {
+            if (e.target === detailModal) {
+                detailModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // ==================== BOOKING MODAL FUNCTIONALITY ====================
+        
+        const bookingModal = document.getElementById('bookingModal');
+        const bookingModalClose = document.getElementById('bookingModalClose');
+        const bookingModalBody = document.getElementById('bookingModalBody');
+        let currentBookingItem = '';
+        
+        // Open booking modal from detail modal
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('book-now-btn') || e.target.closest('.book-now-btn')) {
+                const btn = e.target.classList.contains('book-now-btn') ? e.target : e.target.closest('.book-now-btn');
+                currentBookingItem = btn.dataset.item;
+                openBookingModal();
+            }
+        });
+        
+        function openBookingModal() {
+            bookingModalBody.innerHTML = `
+                <h3>Book ${currentBookingItem}</h3>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="bookingName">Your Name *</label>
+                        <input type="text" id="bookingName" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthdayPerson">Birthday Person's Name *</label>
+                        <input type="text" id="birthdayPerson" required placeholder="Enter birthday person's name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookingPhone">Mobile Number *</label>
+                        <input type="tel" id="bookingPhone" required placeholder="Enter your WhatsApp number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookingDate">Event Date *</label>
+                        <input type="date" id="bookingDate" required>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 20px;">
+                        <i class="fas fa-check-circle"></i> Confirm Booking
+                    </button>
+                </form>
+            `;
+            
+            const bookingDateInput = document.getElementById('bookingDate');
+            if (bookingDateInput) {
+                bookingDateInput.min = today;
+            }
+            
+            bookingModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            detailModal.classList.remove('active');
+        }
+        
+        // Close booking modal
+        bookingModalClose.addEventListener('click', () => {
+            bookingModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close booking modal when clicking outside
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                bookingModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Handle booking form submission
+        document.addEventListener('submit', (e) => {
+            if (e.target.id === 'bookingForm') {
+                e.preventDefault();
+                
+                const name = document.getElementById('bookingName').value;
+                const birthdayPerson = document.getElementById('birthdayPerson').value;
+                const phone = document.getElementById('bookingPhone').value;
+                const date = document.getElementById('bookingDate').value;
+                
+                const bookingMessage = `New Booking Request:%0A%0A*Service:* ${currentBookingItem}%0A*Customer Name:* ${name}%0A*Birthday Person:* ${birthdayPerson}%0A*Phone:* ${phone}%0A*Event Date:* ${date}%0A%0A_Please confirm this booking._`;
+                
+                window.open(`https://wa.me/923180277767?text=${bookingMessage}`, '_blank');
+                
+                bookingModalBody.innerHTML = `
+                    <div class="booking-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Booking Confirmed!</h4>
+                        <p>Your booking for <strong>${currentBookingItem}</strong> has been sent successfully.</p>
+                        <p>We will contact you shortly on WhatsApp to confirm the details.</p>
+                        <p style="margin-top: 30px; color: var(--gold);"><strong>Thank you for choosing Sabeer Birthday Art!</strong></p>
+                        <button class="btn" style="margin-top: 30px;" id="closeSuccessModal">
+                            <i class="fas fa-times"></i> Close
+                        </button>
+                    </div>
+                `;
+                
+                document.getElementById('closeSuccessModal').addEventListener('click', () => {
+                    bookingModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+        
+        // ==================== SOCIAL LINKS ====================
+        
+        function openSocialLink(platform) {
+            let url = '#';
+            switch(platform) {
+                case 'facebook':
+                    url = 'https://facebook.com';
+                    break;
+                case 'instagram':
+                    url = 'https://instagram.com';
+                    break;
+                default:
+                    url = '#';
+            }
+            window.open(url, '_blank');
+        }
+        
+        // ==================== INITIALIZATION ====================
+        
+        // Make all interactive elements clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            const interactiveElements = document.querySelectorAll('button, a, .btn, .gallery-media, .offer-image, .menu-image, .about-image, .hero-image, .contact-icon, .social-icons a, .footer-links a');
+            
+            interactiveElements.forEach(el => {
+                if (!el.style.cursor) {
+                    el.style.cursor = 'pointer';
+                }
+            });
+            
+            // Make view full buttons work
+            document.querySelectorAll('.view-full-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const mediaContainer = this.closest('.gallery-media');
+                    const imageUrl = mediaContainer.dataset.image;
+                    if (imageUrl) {
+                        openImageLightbox(imageUrl, 'gallery');
+                    }
+                });
+            });
+            
+            // Ensure all footer links work properly
+            document.querySelectorAll('.footer-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        navigateToPage(href.substring(1));
+                    }
+                });
+            });
+            
+            console.log('Sabeer Birthday Art Website Fully Loaded');
+            console.log('All updates applied successfully:');
+            console.log('1. Header Navigation: All navigation links now work correctly');
+            console.log('2. Home Page: All buttons fully clickable');
+            console.log('3. About Page: Book Your Celebration button now fully clickable');
+            console.log('4. Services Page: All "Book Now" buttons working properly');
+            console.log('5. Contact Page: Call Now button triggers phone call');
+            console.log('6. Feedback Page: Submit Feedback button works correctly');
+            console.log('7. Footer: All links navigate properly across all pages');
+            console.log('8. All interactive elements have proper cursor styling');
+        });
+        
+        // ==================== ENSURE ALL BUTTONS ARE CLICKABLE ====================
+        
+        // Add click handlers to any remaining buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make sure all service buttons work
+            document.querySelectorAll('.service-card .btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (!this.getAttribute('href')) {
+                        e.preventDefault();
+                        navigateToPage('contact');
+                    }
+                });
+            });
+            
+            // Make sure all menu card buttons work
+            document.querySelectorAll('.menu-card .btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // These buttons already have event handlers from the viewDetailsBtns loop
+                });
+            });
+            
+            // Make sure all offer card buttons work
+            document.querySelectorAll('.offer-card .btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (!this.getAttribute('href') && !this.classList.contains('book-package-btn')) {
+                        e.preventDefault();
+                        navigateToPage('contact');
+                    }
+                });
+            });
+            
+            // Make sure social icons work
+            document.querySelectorAll('.social-icons a').forEach(icon => {
+                icon.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
